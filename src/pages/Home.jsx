@@ -10,7 +10,7 @@ const NotFoundPage = () => {
         <b>This is the MFA Lab!!</b>
         <br />
         <br />
-        It uses Auth0 to authenticate and keep track of users. to test out the
+        It uses Auth0 to authenticate and keep track of users. To test out the
         flow, login or create an account:
       </p>
       <button
