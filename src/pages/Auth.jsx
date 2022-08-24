@@ -4,11 +4,14 @@ import { useAuth0 } from "@auth0/auth0-react";
 import { fallback } from "../components/SuspenseUI";
 import ReactJson from "@textea/json-viewer";
 
-const NotFoundPage = () => {
-  const { user, logout, isLoading, isAuthenticated } = useAuth0();
+const AuthPage = () => {
+  const { user, logout, isLoading, isAuthenticated, getAccessTokenSilently } =
+    useAuth0();
 
   if (isLoading) return fallback;
   if (!isAuthenticated) return <Navigate to="/" />;
+
+  getAccessTokenSilently().then(console.log);
 
   return (
     <div className="auth-main">
@@ -28,4 +31,4 @@ const NotFoundPage = () => {
   );
 };
 
-export default NotFoundPage;
+export default AuthPage;

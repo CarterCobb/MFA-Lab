@@ -1,7 +1,7 @@
 import { useAuth0 } from "@auth0/auth0-react";
 import React from "react";
 
-const NotFoundPage = () => {
+const HomePage = () => {
   const { loginWithRedirect } = useAuth0();
   return (
     <div className="home-main">
@@ -30,4 +30,4 @@ const NotFoundPage = () => {
   );
 };
 
-export default NotFoundPage;
+export default HomePage;
